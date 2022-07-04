@@ -12,12 +12,12 @@ import './App.css';
 
 
 function App() {
-  
+  const [query, setQuery] = useState([])
   return (
     <div className="App">
-      <Navbar></Navbar>
+      <Navbar setQuery={setQuery}></Navbar>
       <Routes>
-        <Route path='/' element={<Home />}></Route>
+        <Route path='/' element={<Home query={query} />}></Route>
         <Route path='/about' element={<About />}></Route>
         <Route path='/contact' element={<Contact />}></Route>
         <Route path='detail/:id' element={<Detail />}></Route>

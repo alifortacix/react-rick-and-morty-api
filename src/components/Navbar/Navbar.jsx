@@ -1,12 +1,12 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Logo from './Logo'
 import Links from './Links'
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <div className='navbar navbar-expand-lg bg-dark navbar-dark'>
         <div className="container-fluid">
             <Logo />
-            <Links />
+            <Links setQuery={props.setQuery} />
         </div>
     </div>
   )

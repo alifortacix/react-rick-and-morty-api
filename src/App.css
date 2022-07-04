@@ -5,3 +5,11 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
+.pt-100{
+  padding-top: 100px;
+}
+
+i{
+  color: 	#383c4a;
+}

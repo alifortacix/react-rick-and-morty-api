@@ -17,7 +17,7 @@ const Home = () => {
     
 
     return (
-        <div className='container'>
+        <div className='container pt-100'>
             <div className="row">
                 {users.filter((user) =>
                     user.name.toLowerCase().includes(query)
