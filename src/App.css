@@ -13,3 +13,27 @@
 i{
   color: 	#383c4a;
 }
+
+.search-input{
+  outline: 0;
+  border: none;
+  height: 40px;
+  width: 200px;
+  padding-left: 10px;
+  font-size: 20px;
+  background: transparent;
+  border-bottom: 1px solid #dfb905;
+  color : #fff;
+  position: relative;
+}
+
+.search-input::after{
+  content: "\f002";
+  color: #fff;
+  position: absolute;
+  right: 0;
+
+}
+.search-input::placeholder{
+  color: white;
+}

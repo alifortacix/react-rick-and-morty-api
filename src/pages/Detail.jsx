@@ -11,11 +11,12 @@ const Detail = () => {
     useEffect( () => {
         axios.get(requestUrl)
         .then(response => setCharacter(response.data))
+        .catch(response => console.log(response))
     }, []);
   return (
     <div className='container'>
-        <div className="row">
-            <div className="col-md-4 d-flex justify-content-center" style={detailStyle}>
+        <div className="row pt-100">
+            <div className="col-md-4 offset-md-4 d-flex justify-content-center" style={detailStyle}>
                 <img className='img-fluid rounded-3' src={character.image} alt={character.image} />
                 <h1 className='text-center'>{character.name}</h1>
                 <h6 className='text-center'>{character.gender}</h6>
@@ -23,6 +24,10 @@ const Detail = () => {
             </div>
             <div className="col-md-8">
                 <ul>
+                    {
+                        console.log(character)
+                        //character['episode'].map(epi => <li>epi</li>)
+                    }
                 </ul>
             </div>
         </div>

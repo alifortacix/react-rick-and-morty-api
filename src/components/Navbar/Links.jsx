@@ -5,15 +5,15 @@ import About from '../../pages/Home'
 
 
 const Links = (props) => {
-    const handleSubmit = (e) =>{
-        props.setQuery = (e.target.value)
+    /* const handleSubmit = (e) =>{
+        props.func = (e.target.value)
         console.log(e.target.value)
     }
 
     const checkProperty = (e) =>{
-        props.setQuery = (e.target.value)
+        props.func = (e.target.value)
         console.log(e.target.value)
-    }
+    } */
 
 
   return (
@@ -29,10 +29,9 @@ const Links = (props) => {
                 <Link to="/contact" className='nav-link'>Contact</Link>
             </li>
         </ul>
-        <form className="d-flex" role="search">
-            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" onKeyUp={checkProperty} />
-            <button className="btn btn-outline-warning" type="submit" onClick={handleSubmit}>Search</button>
-        </form>
+        <div>
+            <input className="search-input" type="search" placeholder="Search" aria-label="" onKeyUp={props.func} />
+        </div>
     </div>
   )
 }

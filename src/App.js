@@ -13,9 +13,13 @@ import './App.css';
 
 function App() {
   const [query, setQuery] = useState([])
+  function handleKey(e){
+      setQuery(e.target.value.toLowerCase())
+      console.log(query)
+  }
   return (
     <div className="App">
-      <Navbar setQuery={setQuery}></Navbar>
+      <Navbar handleKey={handleKey}></Navbar>
       <Routes>
         <Route path='/' element={<Home query={query} />}></Route>
         <Route path='/about' element={<About />}></Route>
